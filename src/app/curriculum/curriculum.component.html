@@ -1,0 +1,6 @@
+@if(curriculum$ | async; as curriculum) {
+  <div [innerHTML]="curriculum | markdown"></div>
+} @else {
+  <div>Curriculum not available in this language</div>
+}
+

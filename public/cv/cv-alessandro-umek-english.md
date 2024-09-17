@@ -59,4 +59,26 @@
 - **Technologies Used:** Angular, Typescript, RxJs, NgRx, HTML5, CSS3, SCSS, Bootstrap, JavaScript (ES6+).
 - **Backend Integration:** Experience with REST APIs and web services, integrating frontend and backend for robust applications.
 - **Agile Methodologies:** Experience working with agile teams and using methodologies such as Scrum and Kanban for project management.
-- **
+- **Problem Solving:** Ability to diagnose and resolve complex technical problems, improving application quality and stability.
+
+---
+
+## Education
+
+**Bachelor’s Degree in Computer Engineering**  
+*University of Trieste*  
+*2015*
+
+**High School Diploma**  
+*Istituto tecnico commerciale “Carli” in Trieste*  
+*2006*  
+Accounting, Commercial Expert, and IT Business Programmer
+
+---
+
+## Language Skills
+
+**Native Language:** Italian  
+**English:** Level B2 (Listening, Reading, Interaction, Speaking, Writing)
+
+---
