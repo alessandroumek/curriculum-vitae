@@ -1,0 +1,16 @@
+<div id="header" class="bg-foreground-900 text-background-white w-100 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <div id="title">
+      <h1>Curriculum Vitae</h1>
+    </div>
+    <div id="navigation">
+      <nav class="flex flex-row-reverse sm:flex-row">
+        <app-menu-item [path]="'/en'" [icon]="'united-kingdom'" [label]="'English'"></app-menu-item>
+        <app-menu-item [path]="'/it'" [icon]="'italy'" [label]="'Italiano'"></app-menu-item>
+        <app-menu-item (execute)="print()" [icon]="'download'" [label]="'Print'"></app-menu-item>
+      </nav>
+    </div>
+  </div>
+</div>
+
+

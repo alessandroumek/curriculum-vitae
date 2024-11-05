@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit, signal } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subscription, tap } from 'rxjs';
 import { MarkdownPipe } from '../core/pipes/markdown.pipe';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
@@ -15,6 +15,8 @@ import { ActivatedRoute } from '@angular/router';
 export class CurriculumComponent implements OnInit, OnDestroy{
 
   public curriculum$!: Observable<string>;
+  public loading = signal(true);
+
   private subscription!: Subscription;
 
   constructor(private httpClient: HttpClient, private route: ActivatedRoute){}
@@ -25,13 +27,14 @@ export class CurriculumComponent implements OnInit, OnDestroy{
    * for the selected language.
    */
   ngOnInit(): void {
+    this.loading.set(true);
     this.subscription = this.route.url.subscribe((url) => {
       const lang = url[0].path;
       if(!lang || !curriculum[lang]) return;
       this.curriculum$ = this.httpClient.get(
         curriculum[lang],
-        {responseType: 'text'}
-      );
+        { responseType: 'text' }
+      ).pipe(tap(() => this.loading.set(false)));
     });
   }
 
