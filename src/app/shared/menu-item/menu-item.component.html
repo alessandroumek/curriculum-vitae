@@ -1,0 +1,8 @@
+<div class="bg-foreground-900 p-2 w-100">
+  <a [routerLink]="path ?? ''" routerLinkActive="active"
+    class="text-background-white w-100 flex justify-center items-center gap-2 hover:border-b-2 hover:border-b-foreground-500"
+    (click)="click.emit()">
+    <img *ngIf="icon" class="m-2" src="/icons/{{ icon }}.svg" alt="icon">
+    <h2>{{ label }}</h2>
+  </a>
+</div>

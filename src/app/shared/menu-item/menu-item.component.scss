@@ -1,0 +1,11 @@
+a{
+  img {
+    width: 40px;
+    height: 30px;
+  }
+  &.active {
+    @apply border-b-2;
+    @apply border-b-background-white;
+  }
+}
+
