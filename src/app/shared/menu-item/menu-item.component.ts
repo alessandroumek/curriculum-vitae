@@ -15,5 +15,10 @@ export class MenuItemComponent {
   @Input() path: string | undefined;
   @Input() icon: string | undefined;
 
-  @Output() click = new EventEmitter<void>();
+  @Output() execute = new EventEmitter<void>();
+
+  get link(): string[]  {
+    return this.path ? [this.path] : [];
+  }
+
 }

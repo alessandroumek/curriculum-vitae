@@ -1,8 +1,6 @@
-<div class="bg-foreground-900 p-2 w-100">
-  <a [routerLink]="path ?? ''" routerLinkActive="active"
-    class="text-background-white w-100 flex justify-center items-center gap-2 hover:border-b-2 hover:border-b-foreground-500"
-    (click)="click.emit()">
+<div class="bg-foreground-900 w-100">
+  <a [routerLink]="link" [routerLinkActive]="path ? 'active' : ''" class="m-1 md:m-2 text-background-white w-100 flex justify-center items-center px-2 hover:border-b-2 hover:border-b-foreground-500" (click)="execute.emit()">
     <img *ngIf="icon" class="m-2" src="/icons/{{ icon }}.svg" alt="icon">
-    <h2>{{ label }}</h2>
+    <h2 class="action-label hidden lg:block">{{ label }}</h2>
   </a>
 </div>
